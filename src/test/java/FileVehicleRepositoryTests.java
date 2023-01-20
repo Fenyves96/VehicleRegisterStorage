@@ -1,6 +1,7 @@
-import dao.VehicleRepository;
-import entity.Vehicle;
+
 import org.example.dao.FileVehicleRepository;
+import org.example.dao.VehicleRepository;
+import org.example.entity.Vehicle;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;
@@ -22,6 +23,15 @@ public class FileVehicleRepositoryTests {
         assertEquals(getLineFromFile(1), "BB:BC-123;Volkswagen;Golf;5;n1");
     }
 
+    @Test
+    public void testFindVehicleByRegistrationNumber(){
+        FileVehicleRepository repository = new FileVehicleRepository();
+        Vehicle vehicle = createOpelAstra();
+        repository.saveVehicle(createOpelAstra());
+        Vehicle result = repository.findVehicleByRegistrationNumber(vehicle.getRegistrationNumber());
+        assertEquals(vehicle.getModel(), result.getModel());
+    }
+
     private static Vehicle createVolswagen() {
         Vehicle volkswagen = new Vehicle();
         volkswagen.setMake("Volkswagen");
@@ -40,15 +50,6 @@ public class FileVehicleRepositoryTests {
         vehicle.setRegistrationNumber("AA:BC-123");
         vehicle.setVehicleType("m1");
         return vehicle;
-    }
-
-    @Test
-    public void testFindVehicleByRegistrationNumber(){
-        FileVehicleRepository repository = new FileVehicleRepository();
-        Vehicle vehicle = createOpelAstra();
-        repository.saveVehicle(createOpelAstra());
-        Vehicle result = repository.findVehicleByRegistrationNumber(vehicle.getRegistrationNumber());
-        assertEquals(vehicle.getModel(), result.getModel());
     }
 
     private String getLineFromFile(int lineNumber){

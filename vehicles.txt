@@ -1,0 +1,2 @@
+AA:BC-123;Opel;Astra;5;m1
+BB:BC-123;Volkswagen;Golf;5;n1

@@ -1,7 +1,6 @@
 package org.example.dao;
 
-import dao.VehicleRepository;
-import entity.Vehicle;
+import org.example.entity.Vehicle;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
