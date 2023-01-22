@@ -42,7 +42,7 @@ public class FileVehicleRepositoryTests {
         return volkswagen;
     }
 
-    private static Vehicle createOpelAstra() {
+    private Vehicle createOpelAstra() {
         Vehicle vehicle = new Vehicle();
         vehicle.setMake("Opel");
         vehicle.setModel("Astra");
