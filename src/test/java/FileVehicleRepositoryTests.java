@@ -1,7 +1,7 @@
 
-import org.example.dao.FileVehicleRepository;
-import org.example.dao.VehicleRepository;
-import org.example.entity.Vehicle;
+import hu.fenyvesvolgyimate.vehicleregisterapp.dao.FileVehicleRepository;
+import hu.fenyvesvolgyimate.vehicleregisterapp.dao.VehicleRepository;
+import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;
 import org.junit.jupiter.api.Test;
 
 import java.io.BufferedReader;

@@ -1,6 +1,6 @@
-package org.example.dao;
+package hu.fenyvesvolgyimate.vehicleregisterapp.dao;
 
-import org.example.entity.Vehicle;
+import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
