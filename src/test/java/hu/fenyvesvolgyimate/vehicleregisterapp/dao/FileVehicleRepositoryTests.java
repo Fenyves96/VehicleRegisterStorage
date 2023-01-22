@@ -1,6 +1,5 @@
+package hu.fenyvesvolgyimate.vehicleregisterapp.dao;
 
-import hu.fenyvesvolgyimate.vehicleregisterapp.dao.FileVehicleRepository;
-import hu.fenyvesvolgyimate.vehicleregisterapp.dao.VehicleRepository;
 import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;
 import org.junit.jupiter.api.Test;
 
