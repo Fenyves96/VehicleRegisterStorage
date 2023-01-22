@@ -1,4 +1,4 @@
-package hu.fenyvesvolgyimate.vehicleregisterapp.dao;
+package hu.fenyvesvolgyimate.vehicleregisterapp.storage;
 
 import hu.fenyvesvolgyimate.vehicleregisterapp.entity.Vehicle;
 
@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileVehicleRepository implements VehicleRepository {
+public class FileVehicleRepository implements VehicleRepository{
 
     public FileVehicleRepository(){
         clearFile();
