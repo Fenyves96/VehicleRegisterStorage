@@ -43,7 +43,8 @@ public class FileVehicleRepository implements VehicleRepository{
                 vehicle.getMake() + SEPARATOR +
                 vehicle.getModel() + SEPARATOR +
                 vehicle.getNumberOfSeats() + SEPARATOR +
-                vehicle.getVehicleType();
+                vehicle.getVehicleType() + SEPARATOR +
+                vehicle.getMotorEmissionType();
     }
 
     @Override
@@ -71,6 +72,7 @@ public class FileVehicleRepository implements VehicleRepository{
         vehicle.setModel(vehicleAttributes[2]);
         vehicle.setNumberOfSeats(Integer.parseInt(vehicleAttributes[3]));
         vehicle.setVehicleType(vehicleAttributes[4]);
+        vehicle.setMotorEmissionType(vehicleAttributes[5]);
         return vehicle;
     }
 }
