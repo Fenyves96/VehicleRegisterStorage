@@ -9,14 +9,15 @@ import java.io.IOException;
 
 public class FileVehicleRepository implements VehicleRepository{
 
+    String vehicleFilePath = "D:\\common\\vehicles.txt";
     public FileVehicleRepository(){
-        clearFile();
+        //clearFile();
     }
 
     private void clearFile() {
         FileWriter fileWriter;
         try {
-            fileWriter = new FileWriter("vehicles.txt");
+            fileWriter = new FileWriter(vehicleFilePath);
             fileWriter.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -29,7 +30,7 @@ public class FileVehicleRepository implements VehicleRepository{
     public void saveVehicle(Vehicle vehicle) {
         FileWriter fileWriter;
         try {
-            fileWriter = new FileWriter("vehicles.txt", true);
+            fileWriter = new FileWriter(vehicleFilePath, true);
             fileWriter.write(generateVehicleRow(vehicle) + System.lineSeparator());
             fileWriter.close();
         } catch (IOException e) {
@@ -50,7 +51,7 @@ public class FileVehicleRepository implements VehicleRepository{
         String line;
         Vehicle result = null;
         try {
-            BufferedReader bufferreader = new BufferedReader(new FileReader("vehicles.txt"));
+            BufferedReader bufferreader = new BufferedReader(new FileReader(vehicleFilePath));
             while((line = bufferreader.readLine()) != null){
                 Vehicle vehicle = parseVehicle(line);
                 if(vehicle.getRegistrationNumber().equals(registrationNumber))
